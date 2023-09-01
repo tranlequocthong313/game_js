@@ -26,5 +26,11 @@
 select,
 option {
     font-size: 25px;
+}
+
+select,
+option {
+    background-color: black;
+    color: white;
     cursor: pointer;
 }
