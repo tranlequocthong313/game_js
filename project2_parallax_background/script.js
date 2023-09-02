@@ -56,7 +56,7 @@ const gameObjects = [layer1, layer2, layer3, layer4, layer5]
 function animate() {
     artist.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT)
 
-    gameObjects.forEach(obj => {
+    layers.forEach(obj => {
         obj.update()
         obj.draw()
     })

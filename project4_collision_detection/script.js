@@ -8,8 +8,6 @@ const CANVAS_WIDTH = canvas.width = 500
 const CANVAS_HEIGHT = canvas.height = 700
 const canvasRect = canvas.getBoundingClientRect()
 
-let gameFrame = 0
-
 const img = new Image
 img.src = 'boom.png'
 const spriteEffect = {
@@ -86,28 +84,24 @@ function animate() {
         }
     })
 
-    gameFrame++
     requestAnimationFrame(animate)
 }
 
 animate()
 
 window.addEventListener('click', function (e) {
-    createAnimation(e)
+    createExplosionEffect(e)
 })
 
-function createAnimation(e) {
+function createExplosionEffect(e) {
     const positionX = e.x - canvasRect.left
     const positionY = e.y - canvasRect.top
     for (let explosion of explosions) {
         if (explosion.isActive === false) {
             explosion.setPosition(positionX, positionY)
             explosion.isActive = true
-            locked = false
             return
         }
     }
     explosions.push(new Explosions(positionX, positionY, spriteEffect, soundEffect, true))
-    locked = false
 }
-
