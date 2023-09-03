@@ -51,7 +51,7 @@ const layer3 = new Layer(backgrounds[2], .6)
 const layer4 = new Layer(backgrounds[3], .8)
 const layer5 = new Layer(backgrounds[4], 1)
 
-const gameObjects = [layer1, layer2, layer3, layer4, layer5]
+const layers = [layer1, layer2, layer3, layer4, layer5]
 
 function animate() {
     artist.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT)
