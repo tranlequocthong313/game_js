@@ -311,7 +311,6 @@ window.addEventListener('load', function () {
         }
     }
 
-    // T
     const $ = document.querySelector.bind(document)
     const canvas = $('#canvas')
     const ctx = canvas.getContext('2d')
